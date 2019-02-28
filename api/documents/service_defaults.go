@@ -17,7 +17,7 @@ func RegisterDefaults(alias, database string, sessMng *session.SessionManager, c
 	dc.RegisterDefaults(alias, database, container, cors)
 }
 
-// Adds documents resource to container with default alias and database
+// RegisterDefaults adds documents resource to container with default alias and database
 func (d Resource) RegisterDefaults(alias, database string, container *restful.Container, cors bool) {
 	ws := d.WebServiceDefaults(alias, database)
 

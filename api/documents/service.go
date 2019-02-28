@@ -19,7 +19,7 @@ func Register(sessMng *session.SessionManager, container *restful.Container, cor
 	dc.Register(container, cors)
 }
 
-// Adds documents resource to container
+// Register adds documents resource to container
 func (d Resource) Register(container *restful.Container, cors bool) {
 	ws := d.WebService()
 

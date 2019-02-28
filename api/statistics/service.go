@@ -11,7 +11,7 @@ func Register(sessMng *session.SessionManager, container *restful.Container) {
 	dc.Register(container)
 }
 
-// Adds Statistics Resource to container
+// Register adds Statistics Resource to container
 func (r Resource) Register(container *restful.Container) {
 	container.Add(r.WebService())
 }

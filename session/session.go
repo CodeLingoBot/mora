@@ -30,7 +30,7 @@ func NewSessionManager(props *properties.Properties) *SessionManager {
 	return sess
 }
 
-// Returns slice containing all configured aliases
+// GetAliases returns slice containing all configured aliases
 func (s *SessionManager) GetAliases() []string {
 	aliases := []string{}
 	for k := range s.configMap {
@@ -39,7 +39,7 @@ func (s *SessionManager) GetAliases() []string {
 	return aliases
 }
 
-// Gets session for alias
+// Get gets session for alias
 func (s *SessionManager) Get(alias string) (*mgo.Session, bool, error) {
 	// Get alias configurations
 	config, err := s.GetConfig(alias)
